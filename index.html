@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4c842">
+  <title>Easger Duckins | Duck Your Style</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">🦆 FREE SHIPPING ON ORDERS OVER 1500 EGP · WELCOME TO THE FLOCK</div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Easger Duckins home">
+      <span class="brand-duck">🦆</span>
+      <span class="brand-name">EASGER<br>DUCKINS</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#shop">SHOP</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+    <button class="cart-button" id="open-cart" type="button">
+      <span>🛒 BAG</span><span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">A LITTLE DIFFERENT. A LOT OF ATTITUDE.</p>
+        <h1>DUCK<br><span>YOUR</span><br>STYLE.</h1>
+        <p class="hero-description">Fresh fits, comfy layers and everyday pieces made to stand out. Find your next favorite look at Easger Duckins.</p>
+        <a class="button button-dark" href="#shop">SHOP THE DROP ↗</a>
+      </div>
+      <div class="hero-visual" aria-label="Easger Duckins duck mascot">
+        <span class="hero-sticker">STAY<br>QUACKY!</span>
+        <span class="hero-duck">🦆</span>
+        <span class="hero-star star-one">✳</span>
+        <span class="hero-star star-two">✦</span>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE DUCKINS COLLECTION</p>
+          <h2>FIND YOUR FIT.</h2>
+          <p class="muted">Choose your pieces, pick your size and color, and join the flock.</p>
+        </div>
+        <span class="duck-stamp">ED<br>🦆</span>
+      </div>
+
+      <div class="category-tabs" role="tablist" aria-label="Product categories">
+        <button class="category-tab active" data-category="all">ALL</button>
+        <button class="category-tab" data-category="offers">OFFERS</button>
+        <button class="category-tab" data-category="hoodies">HOODIES</button>
+        <button class="category-tab" data-category="pants">PANTS</button>
+      </div>
+
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="big-message">
+      <p class="eyebrow">EASGER DUCKINS CLUB</p>
+      <h2>NOT JUST A FIT.<br><span>IT'S A FLOCK.</span></h2>
+      <a href="about.html" class="button button-yellow">GET TO KNOW US ↗</a>
+      <div class="message-duck">🦆</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">🦆 EASGER DUCKINS</a>
+    <span>© 2026 EASGER DUCKINS. ALL RIGHTS RESERVED.</span>
+    <a href="about.html">ABOUT THE BRAND</a>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header">
+      <div><p class="eyebrow">YOUR ORDER</p><h2>YOUR DUCK BAG 🦆</h2></div>
+      <button class="close-cart" id="close-cart" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <div class="empty-cart"><span>🦆</span><p>Your bag is empty.<br>Let's find you a fresh fit!</p></div>
+    </div>
+
+    <div class="checkout-area">
+      <div class="subtotal"><span>SUBTOTAL</span><strong id="subtotal">0 EGP</strong></div>
+      <form id="order-form">
+        <p class="form-title">DELIVERY DETAILS</p>
+        <label for="customer-name">Full name</label>
+        <input id="customer-name" name="customer_name" autocomplete="name" required placeholder="Your full name">
+        <label for="customer-email">Email address</label>
+        <input id="customer-email" name="customer_email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="customer-phone">Phone number</label>
+        <input id="customer-phone" name="customer_phone" type="tel" autocomplete="tel" required placeholder="+20...">
+        <label for="customer-address">Delivery address</label>
+        <textarea id="customer-address" name="customer_address" autocomplete="street-address" required placeholder="City, street, building and apartment"></textarea>
+        <input type="hidden" name="order_details" id="order-details">
+        <input type="hidden" name="_subject" value="New Easger Duckins order">
+        <input type="hidden" name="_captcha" value="false">
+        <button class="submit-order" id="submit-order" type="submit">SUBMIT ORDER ↗</button>
+        <p class="form-note">Please select a size and color for every item. We'll contact you to confirm your order.</p>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
